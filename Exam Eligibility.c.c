@@ -1,0 +1,28 @@
+/*
+name: joseph muiga wachura
+regno: CT100/G/30672/26
+DATE: 15/10/2026
+REF: final exams eligibility texr
+*/
+
+
+#include <stdio.h>
+
+int main() {
+	
+	float attendance, marks;
+	
+	printf("Enter attendance: \t");
+	scanf("%f",&attendance);
+	
+	printf("Enter marks out of 100: \t");
+	scanf("%f",&marks);
+	
+	if (attendance >= 75 && marks >= 40){
+		printf("Eligible for the exams\n");
+	}
+	else{
+		printf("Not eligible for the exams\n");
+	}
+	return 0;
+}
