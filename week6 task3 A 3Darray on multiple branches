@@ -1,0 +1,52 @@
+/*
+name:joseph muiga wachira
+reg no: CT100/30672/26
+DESCRIPTION: A chain on number of rooms in a hotel
+*/
+
+
+#include <stdio.h>
+
+int main()
+{
+    int chain[3][5][10];
+    int i, j, k;
+    int occupied = 0;
+
+    // Input room occupancy
+    for(i = 0; i < 3; i++)
+    {
+        printf("\nEnter occupancy for Branch %d:\n", i + 1);
+
+        for(j = 0; j < 5; j++)
+        {
+            printf("\nFloor %d:\n", j + 1);
+
+            for(k = 0; k < 10; k++)
+            {
+                printf("Room %d (1=Occupied, 0=Vacant): ", k + 1);
+                scanf("%d", &chain[i][j][k]);
+            }
+        }
+    }
+
+    // Calculate occupied rooms
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 5; j++)
+        {
+            for(k = 0; k < 10; k++)
+            {
+                if(chain[i][j][k] == 1)
+                {
+                    occupied++;
+                }
+            }
+        }
+    }
+
+    // Display total occupied rooms
+    printf("\nTotal occupied rooms across all branches = %d\n", occupied);
+
+    return 0;
+}
