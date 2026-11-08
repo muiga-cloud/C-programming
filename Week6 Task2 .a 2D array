@@ -1,0 +1,47 @@
+/*
+name: Joseph Muiga wachira
+reg no: CT100/30672/26
+DATE: 8/11/2026
+Description: showing thr number of room occupants and vacancies
+*/
+
+#include <stdio.h>
+
+int main() {
+    int occupancy[5][10];
+    int occupied, vacant;
+
+    printf("HOTEL ROOM OCCUPANCY SYSTEM\n");
+
+    // Input occupancy data
+    for (int i = 0; i < 5; i++) {
+        printf("\nEnter occupancy for Floor %d (1 = Occupied, 0 = Vacant):\n", i + 1);
+
+        for (int j = 0; j < 10; j++) {
+            printf("Room %d: ", j + 1);
+            scanf("%d", &occupancy[i][j]);
+        }
+    }
+
+    // Calculate and display results
+    printf("\nROOM OCCUPANCY REPORT\n");
+
+    for (int i = 0; i < 5; i++) {
+        occupied = 0;
+        vacant = 0;
+
+        for (int j = 0; j < 10; j++) {
+            if (occupancy[i][j] == 1) {
+                occupied++;
+            } else {
+                vacant++;
+            }
+        }
+
+        printf("\nFloor %d\n", i + 1);
+        printf("Occupied rooms: %d\n", occupied);
+        printf("Vacant rooms: %d\n", vacant);
+    }
+
+    return 0;
+}
