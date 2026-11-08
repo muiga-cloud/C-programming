@@ -1,0 +1,28 @@
+/*
+name: JOSEPH mUIGA WACHIRA
+reg no: CT100/30672/26
+date:7/10/2026
+description:calculating revenue using 1D array
+*/
+
+
+
+#include <stdio.h>
+
+int main() {
+    float revenue[7];
+    float total=0,average;
+    
+    int i;
+    for(i=0;i<7;i++){
+        printf("enter revenue for the day %d:",i+1);
+        scanf("%f",&revenue[i]);
+
+        total=total+revenue[i];  
+    }
+
+    printf("total weekly revenue is %.2f\n",total);
+    printf("total average revenue is %.2f\n",average);
+    
+    return 0;
+}
