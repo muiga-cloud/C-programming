@@ -1,0 +1,37 @@
+
+/*
+name joseph muiga wachira
+reg no CT100/G/30672/26
+DATE 13/11/2026
+DESCRIPTION: calculating salary using the hours worked and wages
+*/
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+//function prototype
+float calculateSalary(float hours_worked, float hourly_wages);
+
+int main(){
+	float work, wages, weeklySalary;
+	
+	printf("enter the hours_worked\n");
+	scanf("%f",&work);
+	
+	printf("enter hourly_wages\n");
+	scanf("%f",&wages);
+	
+	// function call
+weeklySalary=calculateSalary(work,wages);
+printf("employees weekly salary is %.2f\n",weeklySalary);
+	
+
+		return 0;
+}
+//function definition
+float calculateSalary(float hours_worked, float hourly_wages){
+	float weeklySalary;
+	weeklySalary = hourly_wages*hours_worked;
+	return weeklySalary;
+}
